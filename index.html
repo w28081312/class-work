@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gemini 聊天機器人</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💬 Gemini 聊天機器人</h1>
+    
+    <div class="api-key-block">
+      <input type="password" id="apiKey" placeholder="請輸入你的 API Key">
+      <button onclick="saveKey()">儲存</button>
+      <span id="keyStatus" class="status"></span>
+    </div>
+
+    <div id="chat" class="chat-box"></div>
+
+    <div class="input-area">
+      <textarea id="userInput" placeholder="輸入訊息..."></textarea>
+      <button onclick="sendMessage()">送出</button>
+      <button onclick="clearChat()">清除對話</button>
+    </div>
+
+    <!-- 載入指示器 -->
+    <div id="loading" class="loading" style="display: none;">
+      <div class="spinner"></div>
+      <span>正在思考中...</span>
+    </div>
+
+    <!-- 錯誤訊息區塊 -->
+    <div id="error" class="error" style="display: none;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
